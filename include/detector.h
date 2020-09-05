@@ -11,7 +11,7 @@ public:
 	detector();
 	detector(std::string ModelPath);
 	void displayExtractedFeatures();
-	bool detectFaceFeatures(cv::Mat Frame);
+	bool detectFaceFeatures(cv::Mat& Frame);
 	int detectEyeState();
 
 private:
