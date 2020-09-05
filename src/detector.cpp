@@ -12,7 +12,7 @@ void detector::displayExtractedFeatures() {
 
 }
 
-bool detector::detectFaceFeatures(cv::Mat frame) {
+bool detector::detectFaceFeatures(cv::Mat& frame) {
 	this->frame = frame.clone(); // clone frame to store unchanged frame incase further processing is needed
 
 	// previous frame's regions not needed
