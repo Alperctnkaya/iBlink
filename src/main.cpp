@@ -17,8 +17,8 @@ void printUsage(messageDecoder decoder) {
 int main() {
 	int x;
 	cv::Mat capturedFrame;
-	cv::VideoCapture capture(0); // starts video capture from device:0
-	detector detector; // detects face features using pre-educated nn model 
+	cv::VideoCapture capture(0); 
+	detector detector; 
 	messageDecoder decoder;
 	printUsage(decoder);
 
@@ -26,7 +26,6 @@ int main() {
 
 		if (detector.detectFaceFeatures(capturedFrame))
 			decoder.getState(detector.detectEyeState());
-		//decoder.printEncoded();
 
 		if (waitKey(10) == 27)
 			break;
